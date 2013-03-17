@@ -48,6 +48,7 @@
               <img src="https://graph.facebook.com/{{friend.id}}/picture" alt="{{friend.name}}">
               {{friend.name}}
             </a>
+            <p> {{friend.name}}</p>
           </li>{% endfor %}</ul>
         </div>
         <div class="list inline">
@@ -88,7 +89,7 @@
         </div>
       </section>
     <section>
-      <div> AYO JACOB </div>
+      <div> AYO JACOB </div> 
       <div class="friendnames">
        {% for friend in friends.data %}
         <p> {{friend.name}} </p>

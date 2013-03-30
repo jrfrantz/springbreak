@@ -11,9 +11,12 @@ from base64 import urlsafe_b64decode, urlsafe_b64encode
 
 import requests
 from flask import Flask, request, redirect, render_template, url_for
+os.environ['FACEBOOK_APP_ID']= '511702678887759'
+os.environ['FACEBOOK_SECRET']= '955265ef335bacc58715bfe3e399e0f5'
 
 FB_APP_ID = os.environ.get('FACEBOOK_APP_ID')
 requests = requests.session()
+print FB_APP_ID
 
 app_url = 'https://graph.facebook.com/{0}'.format(FB_APP_ID)
 FB_APP_NAME = json.loads(requests.get(app_url).content).get('name')
